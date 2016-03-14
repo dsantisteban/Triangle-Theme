@@ -6,10 +6,19 @@
 $mostaza:#dbb075;
 $mostaza-dark:#d99c4e;
 $gray-dark:#383838;
+$font-lato: 'Lato', sans-serif;
+$font-Noto: 'Noto Sans', sans-serif;;
+
+@mixin transition($transition){
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
 
 body {
 	background: #fff;
-	font-family: 'Lato', sans-serif;
+	font-family: $font-lato;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 22px;
@@ -20,15 +29,11 @@ body {
 }
 a {
 	color: #a5732a;
-	-webkit-transition: 300ms;
-	-moz-transition: 300ms;
-	-o-transition: 300ms;
-	transition: 300ms; 
-
+	@include transition(300ms);
 	&:hover {
 		outline: none;
 		text-decoration: none;
-		color: #dab074; 
+		color: $mostaza; 
 	}
 	&:focus {
 		outline: none;
@@ -39,6 +44,9 @@ a {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500; 
 	color:#737373;
+}
+h2{
+	font-size:25px;
 }
 h4{
 	color:black;
@@ -118,9 +126,9 @@ h4{
 	background-position: bottom left;
 	background-size: 64.5%;	
 	.slide-text{
-		position: relative;
-		padding: 0% 1.9% 0% 2.8%;
-		top: 82px;
+    	position: relative;
+    	padding: 0% 2.1% 0% 1.5%;
+    	top: 82px;
 		p{
 			margin: 0 0 30px;
 		}
@@ -203,8 +211,9 @@ h4{
 	}	
 
 }
+/** SECTION FEATURES **/
 #features{
-	padding-top: 48px;
+	padding-top: 31px;
 	.row {
 		padding-bottom: 80px;
 	}  
@@ -212,17 +221,22 @@ h4{
 		padding-left: 48px;
 	}
 }
+/** SECTION CLIENTS **/
 #clients{
 	h1{
 		color:$gray-dark;
 	}
 }
+/** SECTION FOOTER **/
 #footer {
 	padding:20px 0;
 	background-image: url("../images/home/footer.png");
 	background-position: center 98%;
 	background-repeat: repeat-x;
 	background-size: 100%;
+	a{
+		color:$mostaza-dark
+	}
 	.col-sm-12{
 		img{
 			width: 72%;
@@ -247,7 +261,7 @@ h4{
 	}
 	blockquote{
 		border-left: none;
-		padding-left: 25px;
+		padding-left: 26px;
 		padding-right: 68px;
 		position: relative;
 		margin-bottom: 0;
@@ -258,7 +272,7 @@ h4{
 			content: '"';
 			font-size: 40px;
 			color: $mostaza-dark;
-			font-family: 'Noto Sans', sans-serif;
+			font-family: $font-Noto;
 			line-height: 0;
 		}
 		&:before{
@@ -277,5 +291,14 @@ h4{
 	textarea{
 		@extend input;
 	}
+
+}
+@media screen and (max-width:1257px){
+
+#action{
+	.plane{
+		display: none;
+	}
+}
 
 }

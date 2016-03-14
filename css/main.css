@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 body {
   background: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
@@ -20,7 +20,7 @@ a {
   a:hover {
     outline: none;
     text-decoration: none;
-    color: #dab074; }
+    color: #dbb075; }
   a:focus {
     outline: none;
     outline-offset: 0; }
@@ -28,6 +28,9 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   color: #737373; }
+
+h2 {
+  font-size: 25px; }
 
 h4 {
   color: black; }
@@ -91,7 +94,7 @@ h4 {
   background-size: 64.5%; }
   #home-slider .slide-text {
     position: relative;
-    padding: 0% 1.9% 0% 2.8%;
+    padding: 0% 2.1% 0% 1.5%;
     top: 82px; }
     #home-slider .slide-text p {
       margin: 0 0 30px; }
@@ -153,22 +156,27 @@ h4 {
     height: 297%;
     width: 77%; }
 
+/** SECTION FEATURES **/
 #features {
-  padding-top: 48px; }
+  padding-top: 31px; }
   #features .row {
     padding-bottom: 80px; }
   #features .col-sm-6 {
     padding-left: 48px; }
 
+/** SECTION CLIENTS **/
 #clients h1 {
   color: #383838; }
 
+/** SECTION FOOTER **/
 #footer {
   padding: 20px 0;
   background-image: url("../images/home/footer.png");
   background-position: center 98%;
   background-repeat: repeat-x;
   background-size: 100%; }
+  #footer a {
+    color: #d99c4e; }
   #footer .col-sm-12 img {
     width: 72%; }
   #footer .col-sm-12:first-child {
@@ -186,7 +194,7 @@ h4 {
     border-bottom: 3px solid #A36414; }
   #footer blockquote {
     border-left: none;
-    padding-left: 25px;
+    padding-left: 26px;
     padding-right: 68px;
     position: relative;
     margin-bottom: 0; }
@@ -197,7 +205,7 @@ h4 {
       content: '"';
       font-size: 40px;
       color: #d99c4e;
-      font-family: 'Noto Sans', sans-serif;
+      font-family: "Noto Sans", sans-serif;
       line-height: 0; }
     #footer blockquote:before {
       right: 246px;
@@ -207,5 +215,14 @@ h4 {
       -webkit-transform: rotate(180deg); }
   #footer h2 {
     margin-bottom: 60px; }
+
+@media screen and (max-width: 1257px) {
+  #action .plane {
+    display: none; } 
+  #footer {
+  	 background-size: cover;
+  }
+
+}
 
 /*# sourceMappingURL=main.css.map */
